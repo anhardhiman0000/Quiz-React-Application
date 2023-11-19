@@ -39,13 +39,6 @@ const Summary = ({ userAnswers }) => {
         </p>
       </div>
       <ol>
-        {/* 
-        <li>
-          <h3>3</h3>
-          <p className="question">question text</p>
-          <p className="user-answer">user answer</p>
-        </li> 
-        */}
         {userAnswers.map((answer, index) => {
           let cssClass = "user-answer";
 
@@ -58,13 +51,9 @@ const Summary = ({ userAnswers }) => {
           }
 
           return (
-            // <li key={answer}>
             <li key={index}>
               <h3>{index + 1}</h3>
-              {/* <p className="question">question text</p> */}
               <p className="question">{QUESTIONS[index].text}</p>
-              {/* <p className="user-answer">{answer}</p> */}
-              {/* <p className="user-answer">{answer ?? "Skipped"}</p> */}
               <p className={cssClass}>{answer ?? "Skipped"}</p>
             </li>
           );
